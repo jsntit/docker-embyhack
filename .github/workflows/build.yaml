@@ -147,7 +147,7 @@ jobs:
           tag_name: ${{ steps.set_tag.outputs.TAG_NAME }}
           name: ${{ steps.set_tag.outputs.RELEASE_NAME }}
           body_path: Release_body.txt
-          draft: true # Set to true to create a draft release for manual verification
+          draft: false # Set to true to create a draft release for manual verification
           prerelease: ${{ github.ref_name != 'main' }} # Mark as prerelease if not on main branch
           files: |
             Release.txt
